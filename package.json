@@ -1,0 +1,19 @@
+{
+  "name": "redvike",
+  "version": "1.0.0",
+  "description": "Test assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/b-vovk/redvike.git"
+  },
+  "author": "Bogdan Vovk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/b-vovk/redvike/issues"
+  },
+  "homepage": "https://github.com/b-vovk/redvike#readme"
+}
