@@ -1,9 +1,12 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    mocha: true
   },
-  extends: 'standard',
+  extends: [
+    'plugin:cypress/recommended', 'standard'
+  ],
   overrides: [
     {
       env: {
@@ -23,5 +26,10 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-  }
+    camelcase: 'off',
+    'cypress/unsafe-to-chain-command': 'off'
+  },
+  plugins: [
+    '@stylistic/js'
+  ]
 }
