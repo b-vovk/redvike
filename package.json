@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/b-vovk/redvike/issues"
   },
-  "homepage": "https://github.com/b-vovk/redvike#readme"
+  "homepage": "https://github.com/b-vovk/redvike#readme",
+  "dependencies": {
+    "cypress": "^13.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.3.1",
+    "eslint-plugin-promise": "^6.1.1"
+  }
 }
