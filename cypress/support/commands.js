@@ -25,3 +25,15 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 import 'cypress-file-upload'
+
+Cypress.Commands.add('drag', (dragSelector) => {
+  const draggable = Cypress.$(dragSelector)[0]
+
+  draggable.dispatchEvent(new MouseEvent('mousedown'))
+  draggable.dispatchEvent(new MouseEvent('mousemove', { clientX: 10, clientY: 0 }))
+  draggable.dispatchEvent(new MouseEvent('mousemove', {
+    clientX: 340,
+    clientY: 0
+  }))
+  draggable.dispatchEvent(new MouseEvent('mouseup'))
+})
