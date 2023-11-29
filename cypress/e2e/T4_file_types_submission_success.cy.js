@@ -9,14 +9,16 @@ const last_name = 'Tester'
 const email = 'auto_tester@redvike.com'
 const password = 'password'
 
-const files = ['/avatar.gif', '/avatar.jpeg', '/avatar.bmp', '/avatar.jpg']
+// There is an issue uploading '/avatar.gif' type of file
+// TODO: enable execution for '/avatar.gif' once the issue JIRA-21 resolved, append the above array with the '/avatar.gif' value
+const files = ['/avatar.jpeg', '/avatar.bmp', '/avatar.jpg']
 
 files.forEach((file) => {
   describe('Application form', () => {
     beforeEach(() => {
       cy.visit('/')
     })
-    it.skip(`Submit application form successfully with ${file} type`, () => {
+    it(`Submit application form successfully with ${file} type`, () => {
       cy.step('Enter user data')
       application_form.enter_first_name(first_name)
       application_form.enter_last_name(last_name)
