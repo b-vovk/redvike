@@ -1,6 +1,8 @@
 import ApplicationForm from '../pages/application_form'
+import SuccessPage from '../pages/success'
 
 const application_form = new ApplicationForm()
+const success_page = new SuccessPage()
 
 const first_name = 'Auto'
 const last_name = 'Tester'
@@ -30,6 +32,11 @@ describe('Application form', () => {
     cy.step('Click the Submit button')
     application_form.click_submit_button()
 
-    cy.contains('Successful Form Submissions')
+    cy.step('Verify the form is submited sucesfully')
+    success_page.verify_confirmation_text_visible()
+    cy.contains(first_name)
+    cy.contains(last_name)
+    cy.contains(email)
+    success_page.verify_avatar_img_visible()
   })
 })
