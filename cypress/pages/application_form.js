@@ -32,8 +32,8 @@ class ApplicationForm {
     cy.get(FILE_FIELD).attachFile(file)
   }
 
-  slide_thumb () {
-    cy.drag(SLIDER_THUMB)
+  slide_thumb (clientX) {
+    cy.drag(SLIDER_THUMB, clientX)
   }
 
   click_submit_button () {

@@ -28,7 +28,7 @@ describe('Application form', () => {
     application_form.upload_file(file)
 
     cy.step('Slide thumb')
-    application_form.slide_thumb()
+    application_form.slide_thumb(340)
 
     cy.step('Click the Submit button')
     application_form.click_submit_button()
