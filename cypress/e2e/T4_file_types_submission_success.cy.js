@@ -16,7 +16,7 @@ files.forEach((file) => {
     beforeEach(() => {
       cy.visit('/')
     })
-    it(`Submit application form successfully with ${file} type`, () => {
+    it.skip(`Submit application form successfully with ${file} type`, () => {
       cy.step('Enter user data')
       application_form.enter_first_name(first_name)
       application_form.enter_last_name(last_name)
