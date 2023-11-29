@@ -26,13 +26,12 @@
 
 import 'cypress-file-upload'
 
-Cypress.Commands.add('drag', (dragSelector) => {
+Cypress.Commands.add('drag', (dragSelector, clientX) => {
   const draggable = Cypress.$(dragSelector)[0]
 
   draggable.dispatchEvent(new MouseEvent('mousedown'))
-  draggable.dispatchEvent(new MouseEvent('mousemove', { clientX: 10, clientY: 0 }))
   draggable.dispatchEvent(new MouseEvent('mousemove', {
-    clientX: 340,
+    clientX,
     clientY: 0
   }))
   draggable.dispatchEvent(new MouseEvent('mouseup'))
