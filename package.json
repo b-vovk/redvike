@@ -4,7 +4,7 @@
   "description": "Test assignment",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "cy:run": "cypress run --headless",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },
