@@ -15,7 +15,7 @@ describe('Application form', () => {
   beforeEach(() => {
     cy.visit('/')
   })
-  it('Register as a new user', () => {
+  it('Submit application form successfully', () => {
     cy.step('Enter user data')
     application_form.enter_first_name(first_name)
     application_form.enter_last_name(last_name)
